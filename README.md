@@ -2,7 +2,7 @@
 commonly used package
 
 ## [getEllipseBwImg](+Utility/getEllipseBwImg.m)
-```Matlab
+```atlab
 imgH = 512;
 imgW = 1024;
 ellipseBwImg = [];
