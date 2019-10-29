@@ -15,7 +15,5 @@ ellipseBwImg = Utility.getEllipseBwImg(imgH, imgW, 256, 90, 128, 64, 0, ellipseB
 ellipseBwImg = Utility.getEllipseBwImg(imgH, imgW, 87, 685, 512, 30, -45, ellipseBwImg); 
 figure, imshow(ellipseBwImg)
 imwrite(ellipseBwImg, 'ellipseBwImg_1.png')
-
->>
-
 ```
+![image](https://github.com/b9903224/Matlab-utility/blob/master/demo/ellipseBwImg_1.png)
