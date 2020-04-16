@@ -3,6 +3,18 @@ commonly used package
 
 @ Ming-Chih, Hsiao
 
+## [getImgByString](+Utility/getImgByString.m)
+get string image without font file
+```matlab
+
+%%
+stringAry = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&*()-_=+[{]}\|;:",<.>/?''';
+stringAryImg = Utility.getImgByString(stringAry);
+% stringAryImg = imresize(stringAryImg, 10, 'nearest');
+figure, imshow(stringAryImg)
+```
+<img src="https://github.com/b9903224/Matlab-utility/blob/master/demo/getImgByString/getImgByString(fontSize_12).png"/>
+
 ## [getEllipseBwImg](+Utility/getEllipseBwImg.m)
 ```matlab
 imgH = 512;
