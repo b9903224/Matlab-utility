@@ -13,7 +13,7 @@ stringAryImg = Utility.getImgByString(stringAry);
 % stringAryImg = imresize(stringAryImg, 10, 'nearest');
 figure, imshow(stringAryImg)
 ```
-<img src="https://github.com/b9903224/Matlab-utility/blob/master/demo/getImgByString/getImgByString(fontSize_12).png"/>
+<img src="https://github.com/b9903224/Matlab-utility/blob/master/demo/getImgByString/getImgByString(fontSize_12)x10.png"/>
 
 ## [getEllipseBwImg](+Utility/getEllipseBwImg.m)
 ```matlab
