@@ -1,0 +1,30 @@
+function DftRegistration = getDftRegistration(refImg, defectImg, usfac, searchRange)
+
+% edgeValue = 0;
+edgeValue = 127;
+
+%%
+refImg_double = im2double(refImg);
+defectImg_double = im2double(defectImg);
+
+refImg_double_fft2 = fft2(refImg_double);
+defectImg_double_fft2 = fft2(defectImg_double);
+
+%%
+[output, Greg] = Utility.dftregistration(refImg_double_fft2, defectImg_double_fft2, usfac, searchRange);
+
+shiftError = output(1);
+diffPhase = output(2);
+dy = output(3);
+dx = output(4);
+
+%%
+defectImgShift = uint8(abs(ifft2(Greg) * 255));
+defectImgShift = replaceShiftEdge(defectImgShift, dy, dx, edgeVallue);
+
+%%
+figure, imshow(defectImgShift), title(sprintf('defectImgShift : dy: %g, dx: %g', dy, dx))
+figure, imshow(diffImg), title('diffImg')
+imwrite(diff, 'di
+
+end
