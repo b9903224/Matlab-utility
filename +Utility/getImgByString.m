@@ -13,34 +13,34 @@ end
 stringAryImg = cell2mat(stringImgCell');
 
 %%
-stringAry = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&*()-_=+[{]}\|;:",<.>/?''';
-
-close all
-imgH = 12;
-imgW = 12;
-tempImg = zeros(imgH, imgW);
-tempImg = uint8(tempImg);
-
-% stringAry = 'r';
-% stringAry = unique(stringAry);
-stringAryLen = numel(stringAry);
-for i = 1 : stringAryLen
-    textStr = stringAry(i);
-    img = insertText(tempImg, [0,-2], textStr, 'fontsize', 10, 'BoxOpacity', 1, 'TextColor', 'white', 'boxcolor', 'black');
-    img = img(:,:,1);
-    img = img > 127;
-    indices = find(img);
-    fprintf('elseif strcmp(inputString, ''%s'')\n', textStr);
-    fprintf('\tindices = [');
-    for j = 1 : numel(indices)
-        fprintf('%g', indices(j))
-        if j~= numel(indices)
-            fprintf(';')
-        end
-    end
-    fprintf('];\n')
-%     figure, imshow(img)
-end
+% stringAry = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`~!@#$%^&*()-_=+[{]}\|;:",<.>/?''';
+% 
+% close all
+% imgH = 12;
+% imgW = 12;
+% tempImg = zeros(imgH, imgW);
+% tempImg = uint8(tempImg);
+% 
+% % stringAry = 'r';
+% % stringAry = unique(stringAry);
+% stringAryLen = numel(stringAry);
+% for i = 1 : stringAryLen
+%     textStr = stringAry(i);
+%     img = insertText(tempImg, [0,-2], textStr, 'fontsize', 10, 'BoxOpacity', 1, 'TextColor', 'white', 'boxcolor', 'black');
+%     img = img(:,:,1);
+%     img = img > 127;
+%     indices = find(img);
+%     fprintf('elseif strcmp(inputString, ''%s'')\n', textStr);
+%     fprintf('\tindices = [');
+%     for j = 1 : numel(indices)
+%         fprintf('%g', indices(j))
+%         if j~= numel(indices)
+%             fprintf(';')
+%         end
+%     end
+%     fprintf('];\n')
+% %     figure, imshow(img)
+% end
 
 end
 
